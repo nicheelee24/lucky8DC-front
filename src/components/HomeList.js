@@ -29,7 +29,7 @@ export const HomeList = () => {
         EGAME: ["FC", "JDB", "PP", "SPADE", "YL"],
         ESPORTS: ["E1SPORT", "SABA"],
         FISH: ["FASTSPIN", "FC", "JDB", "JILI", "SPADE", "YL"],
-        LIVE: ["BG", "HORSEBOOK", "PP", "PT", "SEXYBCRT", "SV388", "VENUS","7Mojos"],
+        LIVE: ["BG", "HORSEBOOK", "PP", "PT", "SEXYBCRT", "SV388", "VENUS","7Mojos","Evolution"],
         // LOTTO: ["VRLOTTO"],
         SLOT: [
             "DRAGOONSOFT",

@@ -15,6 +15,7 @@ import logo29 from "../assets/img/Logo/peter.png";
 import sexyBaccarat from "../assets/img/Logo/Parlaybay Logo/png/Parlaybay-white.png";
 import evolution from "../assets/img/Logo/Relax Gaming Logo/Relax-Gaming-white.png";
 import playngo from "../assets/img/Logo/Slotmill_Logo/slotmill-logo-all-white-one-line.png";
+import evollution from "../assets/img/Logo/evolution.png";
 import mojos from "../assets/img/Logo/mojos.png";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { useNavigate } from "react-router";
@@ -25,6 +26,11 @@ export const GameProvider = (props) => {
     const navigation = useNavigate();
 
     const Logos = [
+        {
+            Logo: evollution,
+            Url: "",
+            platform: "Evolution",
+        },
         {
             Logo: mojos,
             Url: "",
