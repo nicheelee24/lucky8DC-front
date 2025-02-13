@@ -67,7 +67,17 @@ export default function Deposit({ open, setOpen, type, setType }) {
             )
             .then(function (response) {
                 let resp = response.data;
-                window.open(resp.payUrl, "_blank");
+                console.log("response"+response.status);
+                toast.success("Deposit successful", {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                });
+                //window.open(resp.payUrl, "_blank");
             })
             .catch(function (err) {
                 console.log(err);
