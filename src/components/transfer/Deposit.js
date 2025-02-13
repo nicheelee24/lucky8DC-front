@@ -77,7 +77,7 @@ export default function Deposit({ open, setOpen, type, setType }) {
                     progress: undefined,
                     theme: "light",
                 });
-                window.close();
+                window.location.reload();
                 //window.open(resp.payUrl, "_blank");
             })
             .catch(function (err) {
