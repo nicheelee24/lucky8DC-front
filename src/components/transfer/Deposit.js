@@ -53,7 +53,7 @@ export default function Deposit({ open, setOpen, type, setType }) {
                 "x-auth-token": window.localStorage.getItem("token"),
             },
         };
-        const url = process.env.REACT_APP_BACKEND + "/api/pay/deposit";
+        const url = process.env.REACT_APP_BACKEND + "/api/pay/deposit_dct";
 
         await axios
             .post(
