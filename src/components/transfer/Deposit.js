@@ -23,7 +23,6 @@ import whatsapp_icon from "../../assets/img/whatsapp_sign.svg";
 
 import * as API from "../../services/api";
 import TransactionHistory from "./TransactionHistory";
-import { redirect } from "react-router-dom";
 
 // import useSocket from '../../hooks/useSocket';
 
@@ -33,38 +32,15 @@ export default function Deposit({ open, setOpen, type, setType }) {
     // const { socket, socketConnected } = useSocket();
 
     const dispatch = useDispatch();
-    const [checkState, setCheckState] = useState(null)
+
     const [amount, setAmount] = useState(100);
-    const [bbn, setBbn] = useState("");
-    const [paymethod, setPayMethod] = useState("");
     const [isEmailValid, setIsEmailValid] = useState(false);
     const cancelButtonRef = useRef(null);
     const amountRef = useRef(null);
-    const bbnRef = useRef(null);
-    const payMethodRef = useRef(null);
-    const payMethods=[
-        "QR Prompt Pay",
-        "Bank"
-    ];
-    const bankLists = [
-        "BKKB",
-        "KSKB",
-        "KSAB",
-             
-    ];
 
     const handleAmountChange = (e) => {
         const amount = e.target.value;
         setAmount(amount);
-    };
-    const handleBBNChange = (e) => {
-        const bbn = e.target.value;
-        setBbn(bbn);
-    };
-    const handlePayMethodChange = (e) => {
-        setCheckState(!checkState);
-        const paymethod = e.target.value;
-        setPayMethod(paymethod);
     };
 
     const handleDepositClick = async (e) => {
@@ -77,83 +53,26 @@ export default function Deposit({ open, setOpen, type, setType }) {
                 "x-auth-token": window.localStorage.getItem("token"),
             },
         };
-        //const url = process.env.REACT_APP_BACKEND + "/api/pay/smartpay/promptpay";//deposit_bigpay
-        let url='';
-        var paymeth=payMethodRef.current.value;
-        var currency;
-        var platform;
-       let data=[];
-        if(paymeth!='Bank')
-        {
-         url = process.env.REACT_APP_BACKEND + "/api/pay/deposit_bigpay_qr";
-         data=[
-            amountRef.current.value
-            
-         ]
-        }
-        else
-        {
-            url = process.env.REACT_APP_BACKEND + "/api/pay/deposit_bigpay_bank";
-            data=[
-               amountRef.current.value,
-               bbnRef.current.value
-              
-             ]
-        }
-    
-   
+        const url = process.env.REACT_APP_BACKEND + "/api/pay/deposit";
+
         await axios
             .post(
                 url,
-                data,
+                {
+                    amount: amountRef.current.value,
+                    currency: "baht",
+                    platform: process.env.REACT_APP_PLATFORM,
+                },
                 config
             )
             .then(function (response) {
                 let resp = response.data;
-                let redirectt=resp.PayUrl.split("=");
-                
-                //console.log(resp);
-                if(resp.code=='0')
-                {
-               // window.open(resp.payUrl, "_blank");
-               if(resp.method=='bank')
-                {
-                    window.open(redirectt[1]+'='+redirectt[2],"_self");
-                }
-              else
-              {
-                window.open(resp.PayUrl,"_self");
-              }
-              
-                }
-                else
-                {
-                   
-                        toast.warning("API Response Code: "+resp.code+"-"+resp.msg, {
-                            position: "top-right",
-                            autoClose: 10000,
-                            hideProgressBar: false,
-                            closeOnClick: true,
-                            draggable: true,
-                            progress: undefined,
-                            theme: "light",
-                        });
-                      //  window.location.reload();
-
-                    
-                  
-                   
-                   
-                   
-                
-               
-
-                }
+                window.open(resp.payUrl, "_blank");
             })
             .catch(function (err) {
                 console.log(err);
 
-                toast.error("Login or function error.", {
+                toast.error("Error is occurred", {
                     position: "top-right",
                     autoClose: 5000,
                     hideProgressBar: false,
@@ -310,53 +229,6 @@ export default function Deposit({ open, setOpen, type, setType }) {
                                         <h1 className="mb-12  !text-xl md:text-2xl text-black font-bold">
                                             {t("Deposit")}
                                         </h1>
-                                        <div className="input-wrapper mt-5">
-                                            <label htmlFor="paymethod" className="!text-black font-semibold">
-                                                {t("Payment Method")}
-                                            </label>
-                                            <select 
-                                            checked={checkState}
-                                                value={paymethod}
-                                                onChange={handlePayMethodChange}
-                                                ref={payMethodRef}
-                                                id="paymethod"
-                                                className="rounded-lg px-6 mt-3"
-                                                autoFocus
-                                            >
-                                                {/* <option value="">{t("Select Payment Method")}</option> */}
-                                                {payMethods.map((paym) => (
-                                                    <option
-                                                        key={paym}
-                                                        value={paym}
-                                                    >
-                                                        {t(paym)}
-                                                    </option>
-                                                ))}
-                                            </select>
-                                        </div>
-                                      { checkState && <div className="input-wrapper mt-5">
-                                            <label htmlFor="bbn" className="!text-black font-semibold">
-                                                {t("Bank Name")}
-                                            </label>
-                                            <select
-                                                value={bbn}
-                                                onChange={handleBBNChange}
-                                                ref={bbnRef}
-                                                id="bbn"
-                                                className="rounded-lg px-6 mt-3"
-                                                autoFocus
-                                            >
-                                                <option value="">{t("Select Bank")}</option>
-                                                {bankLists.map((bank) => (
-                                                    <option
-                                                        key={bank}
-                                                        value={bank}
-                                                    >
-                                                        {t(bank)}
-                                                    </option>
-                                                ))}
-                                            </select>
-                                        </div> }<br/>
                                         <div className="input-wrapper">
                                             <label htmlFor="amount"  className="text-black font-bold">
                                                 {t("Amount")}
