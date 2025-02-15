@@ -18,6 +18,8 @@ import playngo from "../assets/img/Logo/Slotmill_Logo/slotmill-logo-all-white-on
 import evollution from "../assets/img/Logo/evolution.png";
 import mojos from "../assets/img/Logo/mojos.png";
 import ezugi from "../assets/img/Logo/ezugi.png";
+import yolted from "../assets/img/Logo/yolted.png";
+import winfast from "../assets/img/Logo/winfast.png";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { useNavigate } from "react-router";
 
@@ -53,6 +55,11 @@ export const GameProvider = (props) => {
             platform: "Evoplay",
         },
         {
+            Logo: yolted,
+            Url: "",
+            platform: "Yolted",
+        },
+        {
             Logo: logo16,
             Url: "",
             platform: "AvatarUX",
@@ -61,6 +68,11 @@ export const GameProvider = (props) => {
             Logo: logo29,
             Url: "",
             platform: "Peter Sons",
+        },
+        {
+            Logo: winfast,
+            Url: "",
+            platform: "Win Fast",
         },
         {
             Logo: logo20,
