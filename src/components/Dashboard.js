@@ -46,7 +46,8 @@ export const Dashboard = () => {
             "Evolution",
             "Ezugi",
             "Yolted",
-            "WinFast"
+            "WinFast",
+            "SAGaming"
         ],
         // LOTTO: ["VRLOTTO"],
         SLOT: [

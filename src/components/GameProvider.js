@@ -20,6 +20,7 @@ import mojos from "../assets/img/Logo/mojos.png";
 import ezugi from "../assets/img/Logo/ezugi.png";
 import yolted from "../assets/img/Logo/yolted.png";
 import winfast from "../assets/img/Logo/winfast.png";
+import sa from "../assets/img/Logo/sa.png";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { useNavigate } from "react-router";
 
@@ -78,6 +79,11 @@ export const GameProvider = (props) => {
             Logo: logo20,
             Url: "",
             platform: "Hacksaw Gaming",
+        },
+        {
+            Logo: sa,
+            Url: "",
+            platform: "SA Gaming",
         },
         {
             Logo: logo28,
