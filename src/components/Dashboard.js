@@ -43,7 +43,8 @@ export const Dashboard = () => {
             "SV388",
             "VENUS",
             "7Mojos",
-            "Evolution"
+            "Evolution",
+            "Ezugi"
         ],
         // LOTTO: ["VRLOTTO"],
         SLOT: [

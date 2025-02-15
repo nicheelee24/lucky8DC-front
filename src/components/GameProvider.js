@@ -17,6 +17,7 @@ import evolution from "../assets/img/Logo/Relax Gaming Logo/Relax-Gaming-white.p
 import playngo from "../assets/img/Logo/Slotmill_Logo/slotmill-logo-all-white-one-line.png";
 import evollution from "../assets/img/Logo/evolution.png";
 import mojos from "../assets/img/Logo/mojos.png";
+import ezugi from "../assets/img/Logo/ezugi.png";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { useNavigate } from "react-router";
 
@@ -30,6 +31,11 @@ export const GameProvider = (props) => {
             Logo: evollution,
             Url: "",
             platform: "Evolution",
+        },
+        {
+            Logo: ezugi,
+            Url: "",
+            platform: "Ezugi",
         },
         {
             Logo: mojos,
