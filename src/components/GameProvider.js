@@ -21,6 +21,7 @@ import ezugi from "../assets/img/Logo/ezugi.png";
 import yolted from "../assets/img/Logo/yolted.png";
 import winfast from "../assets/img/Logo/winfast.png";
 import sa from "../assets/img/Logo/sa.png";
+import thunder from "../assets/img/Logo/thunderpack.png";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { useNavigate } from "react-router";
 
@@ -34,6 +35,11 @@ export const GameProvider = (props) => {
             Logo: evollution,
             Url: "",
             platform: "Evolution",
+        },
+        {
+            Logo: thunder,
+            Url: "",
+            platform: "Thunder Kick",
         },
         {
             Logo: ezugi,
