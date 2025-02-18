@@ -50,7 +50,8 @@ export const Dashboard = () => {
             "SAGaming",
             "ThunderKick",
             "BGaming",
-            "Blueprint"
+            "Blueprint",
+            "RedTiger"
         ],
         // LOTTO: ["VRLOTTO"],
         SLOT: [
