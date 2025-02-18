@@ -48,7 +48,9 @@ export const Dashboard = () => {
             "Yolted",
             "WinFast",
             "SAGaming",
-            "ThunderKick"
+            "ThunderKick",
+            "BGaming",
+            "Blueprint"
         ],
         // LOTTO: ["VRLOTTO"],
         SLOT: [

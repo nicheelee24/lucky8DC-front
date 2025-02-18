@@ -22,6 +22,8 @@ import yolted from "../assets/img/Logo/yolted.png";
 import winfast from "../assets/img/Logo/winfast.png";
 import sa from "../assets/img/Logo/sa.png";
 import thunder from "../assets/img/Logo/thunderpack.png";
+import bgaming from "../assets/img/Logo/bgaming.png";
+import blueprint from "../assets/img/Logo/bprint.png";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { useNavigate } from "react-router";
 
@@ -32,6 +34,11 @@ export const GameProvider = (props) => {
 
     const Logos = [
         {
+            Logo: bgaming,
+            Url: "",
+            platform: "BGaming",
+        },
+        {
             Logo: evollution,
             Url: "",
             platform: "Evolution",
@@ -40,6 +47,11 @@ export const GameProvider = (props) => {
             Logo: thunder,
             Url: "",
             platform: "Thunder Kick",
+        },
+        {
+            Logo: blueprint,
+            Url: "",
+            platform: "Blueprint",
         },
         {
             Logo: ezugi,
