@@ -56,7 +56,8 @@ export const Dashboard = () => {
             "Gamomet",
             "Novomatic",
             "PushGaming",
-            "Octoplay"
+            "Octoplay",
+            "BigTime Gaming"
         ],
         // LOTTO: ["VRLOTTO"],
         SLOT: [

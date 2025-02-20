@@ -31,6 +31,7 @@ import gamo from "../assets/img/Logo/gano.png";
 import novo from "../assets/img/Logo/novo.png";
 import push from "../assets/img/Logo/push.png";
 import octo from "../assets/img/Logo/octo.png";
+import btg from "../assets/img/Logo/btg.png";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { useNavigate } from "react-router";
 
@@ -60,6 +61,11 @@ export const GameProvider = (props) => {
             Logo: thunder,
             Url: "",
             platform: "Thunder Kick",
+        },
+        {
+            Logo: btg,
+            Url: "",
+            platform: "BigTime Gaming",
         },
         {
             Logo: blueprint,
