@@ -35,7 +35,9 @@ export const HomeList = () => {
             "Blueprint",
             "NetEnt",
             "RedTiger",
-            "Novomatic"
+            "Novomatic",
+            "PushGaming",
+            "Octoplay"
         ],
         // LOTTO: ["VRLOTTO"],
         SLOT: [

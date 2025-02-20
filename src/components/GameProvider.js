@@ -29,6 +29,8 @@ import ygg from "../assets/img/Logo/ygg.png";
 import netent from "../assets/img/Logo/netent.png";
 import gamo from "../assets/img/Logo/gano.png";
 import novo from "../assets/img/Logo/novo.png";
+import push from "../assets/img/Logo/push.png";
+import octo from "../assets/img/Logo/octo.png";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { useNavigate } from "react-router";
 
@@ -50,6 +52,11 @@ export const GameProvider = (props) => {
             platform: "Evolution",
         },
         {
+            Logo: octo,
+            Url: "",
+            platform: "Octoplay",
+        },
+        {
             Logo: thunder,
             Url: "",
             platform: "Thunder Kick",
@@ -58,6 +65,11 @@ export const GameProvider = (props) => {
             Logo: blueprint,
             Url: "",
             platform: "Blueprint",
+        },
+        {
+            Logo: push,
+            Url: "",
+            platform: "Push Gaming",
         },
         {
             Logo: ezugi,

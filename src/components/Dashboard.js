@@ -54,7 +54,9 @@ export const Dashboard = () => {
             "RedTiger",
             "NetEnt",
             "Gamomet",
-            "Novomatic"
+            "Novomatic",
+            "PushGaming",
+            "Octoplay"
         ],
         // LOTTO: ["VRLOTTO"],
         SLOT: [

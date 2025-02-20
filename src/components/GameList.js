@@ -39,7 +39,7 @@ export const GameList = () => {
         EGAME: ["FC", "JDB", "PP", "SPADE", "YL"],
         ESPORTS: ["E1SPORT", "SABA"],
         FH: ["FASTSPIN", "FC", "JDB", "JILI", "SPADE", "YL"],
-        LIVE: ["BG", "HORSEBOOK", "Gamomet","Novomatic","PP", "PT", "SEXYBCRT", "SV388", "VENUS","7Mojos","Evolution","Ezugi","Yolted","WinFast","SAGaming","ThunderKick","BGaming","Blueprint","RedTiger","NetEnt"],
+        LIVE: ["BG", "HORSEBOOK","Octoplay","PushGaming", "Gamomet","Novomatic","PP", "PT", "SEXYBCRT", "SV388", "VENUS","7Mojos","Evolution","Ezugi","Yolted","WinFast","SAGaming","ThunderKick","BGaming","Blueprint","RedTiger","NetEnt"],
         // LOTTO: ["VRLOTTO"],
         SLOT: [
             "DRAGOONSOFT",
