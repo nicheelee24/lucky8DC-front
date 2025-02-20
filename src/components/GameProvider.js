@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 
 
 import logo8 from "../assets/img/Logo/logo4.png";
-import logo16 from "../assets/img/Logo/logo (7).png";
+import logo16 from "../assets/img/Logo/avatr.png";
 import logo20 from "../assets/img/Logo/Hacksaw Logo/Hacksaw_Logo_White.png";
 import logo22 from "../assets/img/Logo/NLC logo/nolimitcity-assets-pack/nl_white.png";
 import logo24 from "../assets/img/Logo/playngo.png";
