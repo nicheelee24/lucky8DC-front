@@ -57,7 +57,8 @@ export const GameList = () => {
             "YESBINGO",
             "DCACE",
             "Slotmill",
-            "yg"
+            "yg",
+            "Fantasma Games"
         ],
         TABLE: ["JILI", "KINGMAKER", "LUCKYPOKER", "LUDO", "PG", "RT"],
         // VIRTUAL: ["SABA"],

@@ -33,6 +33,7 @@ import novo from "../assets/img/Logo/novo.png";
 import push from "../assets/img/Logo/push.png";
 import octo from "../assets/img/Logo/octo.png";
 import btg from "../assets/img/Logo/btg.png";
+import fnta from "../assets/img/Logo/fanta.png";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { useNavigate } from "react-router";
 
@@ -82,6 +83,11 @@ export const GameProvider = (props) => {
             Logo: ezugi,
             Url: "",
             platform: "Ezugi",
+        },
+        {
+            Logo: fnta,
+            Url: "",
+            platform: "Fantasma Games",
         },
         {
             Logo: novo,

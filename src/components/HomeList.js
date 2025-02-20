@@ -55,6 +55,7 @@ export const HomeList = () => {
             "RT",
             "SPADE",
             "YESBINGO",
+            "Fantasma Games"
         ],
         TABLE: ["JILI", "KINGMAKER", "LUCKYPOKER", "LUDO", "PG", "RT"],
         VIRTUAL: ["SABA"],

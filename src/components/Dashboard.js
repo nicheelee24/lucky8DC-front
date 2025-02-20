@@ -74,6 +74,7 @@ export const Dashboard = () => {
             "RT",
             "SPADE",
             "YESBINGO",
+            "Fantasma Games"
         ],
         TABLE: ["JILI", "KINGMAKER", "LUCKYPOKER", "LUDO", "PG", "RT"],
         // VIRTUAL: ["SABA"],
