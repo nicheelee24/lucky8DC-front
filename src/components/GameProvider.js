@@ -23,6 +23,7 @@ import winfast from "../assets/img/Logo/winfast.png";
 import sa from "../assets/img/Logo/sa.png";
 import thunder from "../assets/img/Logo/thunderpack.png";
 import bgaming from "../assets/img/Logo/bgaming.png";
+import bg from "../assets/img/Logo/bg.gif";
 import blueprint from "../assets/img/Logo/bprint.png";
 import redtiger from "../assets/img/Logo/redtiger.png";
 import ygg from "../assets/img/Logo/ygg.png";
@@ -43,7 +44,7 @@ export const GameProvider = (props) => {
     const Logos = [
 
         {
-            Logo: bgaming,
+            Logo: bg,
             Url: "",
             platform: "BGaming",
         },
