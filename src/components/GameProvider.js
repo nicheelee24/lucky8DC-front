@@ -26,6 +26,7 @@ import bgaming from "../assets/img/Logo/bgaming.png";
 import blueprint from "../assets/img/Logo/bprint.png";
 import redtiger from "../assets/img/Logo/redtiger.png";
 import ygg from "../assets/img/Logo/ygg.png";
+import netent from "../assets/img/Logo/netent.png";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { useNavigate } from "react-router";
 
@@ -150,6 +151,11 @@ export const GameProvider = (props) => {
             Logo: logo26,
             Url: "",
             platform: "SmartSoft",
+        },
+        {
+            Logo: netent,
+            Url: "",
+            platform: "NetEnt",
         },
        
        

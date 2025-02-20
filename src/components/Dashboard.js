@@ -51,7 +51,8 @@ export const Dashboard = () => {
             "ThunderKick",
             "BGaming",
             "Blueprint",
-            "RedTiger"
+            "RedTiger",
+            "NetEnt"
         ],
         // LOTTO: ["VRLOTTO"],
         SLOT: [
