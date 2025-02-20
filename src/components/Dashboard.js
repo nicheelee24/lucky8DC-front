@@ -52,7 +52,9 @@ export const Dashboard = () => {
             "BGaming",
             "Blueprint",
             "RedTiger",
-            "NetEnt"
+            "NetEnt",
+            "Gamomet",
+            "Novomatic"
         ],
         // LOTTO: ["VRLOTTO"],
         SLOT: [

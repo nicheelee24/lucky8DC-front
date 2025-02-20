@@ -27,6 +27,8 @@ import blueprint from "../assets/img/Logo/bprint.png";
 import redtiger from "../assets/img/Logo/redtiger.png";
 import ygg from "../assets/img/Logo/ygg.png";
 import netent from "../assets/img/Logo/netent.png";
+import gamo from "../assets/img/Logo/gano.png";
+import novo from "../assets/img/Logo/novo.png";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { useNavigate } from "react-router";
 
@@ -36,6 +38,7 @@ export const GameProvider = (props) => {
     const navigation = useNavigate();
 
     const Logos = [
+
         {
             Logo: bgaming,
             Url: "",
@@ -60,6 +63,11 @@ export const GameProvider = (props) => {
             Logo: ezugi,
             Url: "",
             platform: "Ezugi",
+        },
+        {
+            Logo: novo,
+            Url: "",
+            platform: "Novomatic",
         },
         {
             Logo: mojos,
@@ -157,7 +165,11 @@ export const GameProvider = (props) => {
             Url: "",
             platform: "NetEnt",
         },
-       
+        {
+            Logo: gamo,
+            Url: "",
+            platform: "Gamomet",
+        },
        
        
        
