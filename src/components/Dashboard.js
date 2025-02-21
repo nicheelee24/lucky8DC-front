@@ -53,7 +53,7 @@ export const Dashboard = () => {
             "Blueprint",
             "RedTiger",
             "NetEnt",
-            "Gamomet",
+            "Gamomat",
             "Novomatic",
             "PushGaming",
             "Octoplay",

@@ -193,7 +193,7 @@ export const GameProvider = (props) => {
         {
             Logo: gamo,
             Url: "",
-            platform: "Gamomet",
+            platform: "Gamomat",
         },
        
        
