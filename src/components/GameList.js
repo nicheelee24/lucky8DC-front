@@ -37,7 +37,7 @@ export const GameList = () => {
     const INIT_FETCH = 0;
 
     const GAMES_PROVIDERS = {
-        EGAME: [<img src={fnta}></img>, "JDB", "PP", "SPADE", "YL"],
+        EGAME: [<img src='https://media.geeksforgeeks.org/gfg-gg-logo.svg' width='200'></img>, "JDB", "PP", "SPADE", "YL"],
         ESPORTS: ["E1SPORT", "SABA"],
         FH: ["FASTSPIN", "FC", "JDB", "JILI", "SPADE", "YL"],
         LIVE: ["BG", "HORSEBOOK","BigTime Gaming","Octoplay","PushGaming", "Gamomat","Novomatic","PP", "PT", "SEXYBCRT", "SV388", "VENUS","7Mojos","Evolution","Ezugi","Yolted","WinFast","SAGaming","ThunderKick","BGaming","Blueprint","RedTiger","NetEnt"],
