@@ -61,12 +61,25 @@ export const Header = () => {
     const [username, setUsername] = useState("");
 
     const [searchItem, setSearchItem] = useState('');
-
+    const [provider, setProviders] = useState("");
     const handleInputChange = (e) => {
         const searchTerm = e.target.value;
         setSearchItem(searchTerm)
     }
 
+    const fetchProviders = useCallback(async () => {
+        
+        try {
+            const res = await API.getUserBalance();
+            setBalance(res.data.balance);
+            
+            // debugger
+        } catch (error) {
+            // Handle error appropriately (e.g., log it, show a user-friendly message)
+            console.error("Error fetching balance info:", error);
+        }
+       
+    }, []);
     const fetchBalance = useCallback(async () => {
         setLoadingBalance(true);
         try {

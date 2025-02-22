@@ -41,6 +41,9 @@ export async function getRandom({gameType}) {
 export async function getGames({page, limit, gameType, platform}) {
     return await api.get(`/game/${page}?limit=${limit}&gameType=${gameType}&platform=${platform}`);
 }
+export async function getSearchGames({key}) {
+    return await api.get(`/game/search?key=${key}`);
+}
 
 // export async function getGamesByFilter({gameType, platform}) {
 //     return await api.get(`/game/filter/${gameType}/${platform}`);

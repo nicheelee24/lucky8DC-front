@@ -14,6 +14,7 @@ import LoadingModal from "./LoadingPage";
 
 import PlaceHolderImage from "../assets/img/gamePlaceholder.webp";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import fnta from "../assets/img/Logo/fanta.png";
 
 export const GameList = () => {
     const { t } = useTranslation();
@@ -36,7 +37,7 @@ export const GameList = () => {
     const INIT_FETCH = 0;
 
     const GAMES_PROVIDERS = {
-        EGAME: ["FC", "JDB", "PP", "SPADE", "YL"],
+        EGAME: [fnta, "JDB", "PP", "SPADE", "YL"],
         ESPORTS: ["E1SPORT", "SABA"],
         FH: ["FASTSPIN", "FC", "JDB", "JILI", "SPADE", "YL"],
         LIVE: ["BG", "HORSEBOOK","BigTime Gaming","Octoplay","PushGaming", "Gamomat","Novomatic","PP", "PT", "SEXYBCRT", "SV388", "VENUS","7Mojos","Evolution","Ezugi","Yolted","WinFast","SAGaming","ThunderKick","BGaming","Blueprint","RedTiger","NetEnt"],
