@@ -58,8 +58,14 @@ export const Header = () => {
     const [balance, setBalance] = useState(0.0);
     const [totalBetAmount, setTotalBetAmount] = useState(0.0);
     const [loadingBalance, setLoadingBalance] = useState(false);
-
     const [username, setUsername] = useState("");
+
+    const [searchItem, setSearchItem] = useState('');
+
+    const handleInputChange = (e) => {
+        const searchTerm = e.target.value;
+        setSearchItem(searchTerm)
+    }
 
     const fetchBalance = useCallback(async () => {
         setLoadingBalance(true);
@@ -80,12 +86,12 @@ export const Header = () => {
         if (isLogin) {
             fetchBalance();
         }
-    }, [isLogin,fetchBalance]);
+    }, [isLogin, fetchBalance]);
 
     const validEmails = useMemo(
         () => [
             "koiescafe@gmail.com"
-           
+
         ],
         [] // Empty dependency array since there are no dependencies
     );
@@ -162,9 +168,17 @@ export const Header = () => {
                     <div className="items-center flex flex-grow justify-end gap-2">
                         {window.localStorage.getItem("token") === "" ||
                             window.localStorage.getItem("token") === undefined ||
-                            window.localStorage.getItem("token") === null ||
+                            // window.localStorage.getItem("token") === null ||
                             !isLogin ? (
                             <>
+                                <div>
+                                    <input
+                                        type="text"
+                                        value={searchItem}
+                                        onChange={handleInputChange}
+                                        placeholder='Type to search'
+                                    />
+                                </div>
                                 <Link to={"/THAI/ALL"}>
                                     <div className="hidden lg:flex gap-2 py-[14px] px-[24px] cursor-pointer hover:bg-[var(--bgColors)]">
                                         <img
@@ -342,16 +356,16 @@ export const Header = () => {
 
                                     <div className="flex flex-col gap-1 md:gap-4 md:flex-row">
                                         <span className="text-white text-sm md:text-lg w-auto md:px-2 ">
-                                            {"Welcome, "+username+"! "}
+                                            {"Welcome, " + username + "! "}
                                         </span>
 
                                         <div className="flex gap-2 items-center">
-                                            <span className="text-white text-sm md:text-lg" style={{marginLeft:"-18px"}}>{"Balance: "}
+                                            <span className="text-white text-sm md:text-lg" style={{ marginLeft: "-18px" }}>{"Balance: "}
                                                 {loadingBalance
                                                     ? "..."
                                                     : balance.toFixed(2) +
                                                     " THB "}
-                                                <span className="text-[var(--logoutBg)]" style={{fontSize:"16px"}}>
+                                                <span className="text-[var(--logoutBg)]" style={{ fontSize: "16px" }}>
                                                     {loadingBalance
                                                         ? "..."
                                                         : " (Turnover: " +
@@ -385,37 +399,37 @@ export const Header = () => {
                                     {/* <span className="text-[24px] leading-[36px] text-white whitespace-nowrap">
                                             $ USD
                                         </span> */}
-                                          <div className="relative inline-block text-left">
-                                    <span>
-                                        <button
-                                            type="button"
-                                            onClick={toggleDropdown}
-                                            className="inline-flex justify-center w-full py-2 text-sm font-medium border-none bg-transparent mobile-"
-                                            aria-haspopup="true"
-                                            aria-expanded={isOpen}
-                                        >
-                                            <span className="mx-4 w-8 h-8">
-                                                <img
-                                                    className="w-full h-full"
-                                                    src={TranslationIcon}
-                                                    alt="Translation Icon"
-                                                />
-                                            </span>
-                                        </button>
-                                    </span>
-                                    {isOpen && (
-                                        <div
-                                            className="origin-top-right absolute right-0 mt-2 mr-4 w-56 rounded-md shadow-lg bg-black ring-1 ring-black ring-opacity-5 focus:outline-none"
-                                            role="menu"
-                                            aria-orientation="vertical"
-                                            aria-labelledby="options-menu"
-                                        >
-                                            <div className="py-1" role="none">
-                                                <LanguageSelector />
+                                    <div className="relative inline-block text-left">
+                                        <span>
+                                            <button
+                                                type="button"
+                                                onClick={toggleDropdown}
+                                                className="inline-flex justify-center w-full py-2 text-sm font-medium border-none bg-transparent mobile-"
+                                                aria-haspopup="true"
+                                                aria-expanded={isOpen}
+                                            >
+                                                <span className="mx-4 w-8 h-8">
+                                                    <img
+                                                        className="w-full h-full"
+                                                        src={TranslationIcon}
+                                                        alt="Translation Icon"
+                                                    />
+                                                </span>
+                                            </button>
+                                        </span>
+                                        {isOpen && (
+                                            <div
+                                                className="origin-top-right absolute right-0 mt-2 mr-4 w-56 rounded-md shadow-lg bg-black ring-1 ring-black ring-opacity-5 focus:outline-none"
+                                                role="menu"
+                                                aria-orientation="vertical"
+                                                aria-labelledby="options-menu"
+                                            >
+                                                <div className="py-1" role="none">
+                                                    <LanguageSelector />
+                                                </div>
                                             </div>
-                                        </div>
-                                    )}
-                                </div>
+                                        )}
+                                    </div>
                                 </p>
                             </div>
                         )}
