@@ -377,7 +377,7 @@ export const Header = () => {
                                                 {loadingBalance
                                                     ? "..."
                                                     : balance.toFixed(2) +
-                                                    " THB "}
+                                                    " CNY "}
                                                 <span className="text-[var(--logoutBg)]" style={{ fontSize: "16px" }}>
                                                     {loadingBalance
                                                         ? "..."
